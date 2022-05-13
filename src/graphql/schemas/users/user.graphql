@@ -1,0 +1,10 @@
+type User {
+  id: ID!
+  name: String
+  token: String
+  username: String
+}
+
+type Query {
+  me: User
+}

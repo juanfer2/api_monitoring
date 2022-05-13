@@ -1,0 +1,26 @@
+type Request {
+  id: ID!
+  title: String
+  description: String
+  type: String
+  url: String
+  method: String
+}
+
+input RequestInput {
+  projectId: ID!
+  title: String!
+  description: String
+  type: TypeRequests
+  url: String
+  method: String
+}
+
+enum TypeRequests {
+  GRAHPQL
+  REST
+}
+
+type Mutation {
+  createRequest(RequestInput: RequestInput): Request
+}
